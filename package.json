@@ -1,17 +1,30 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "nodemon": "^1.18.4"
-  }
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.15.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoaibcode/express-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shoaibcode/express-handler/issues"
+  },
+  "homepage": "https://github.com/shoaibcode/express-handler#readme",
+  "description": ""
 }
