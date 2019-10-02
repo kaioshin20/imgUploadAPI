@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const upload = require("./handlers/multer")
-require('dotenv').config()
 require('./handlers/cloudinary')
 const cloudinary = require('cloudinary')
 const app = express()
@@ -19,14 +19,13 @@ app.get('/', (req, res) => {
 
 app.post('/create_blog', upload.single("image"), async (req, res) => {
   const result = await cloudinary.v2.uploader.upload(req.file.path)
-  res.send(result)
+  res.render('result',{result});
 })
 
 app.get('/about', (req, res) => {
   res.render('about')
 })
 
-const PORT = 7777
-app.listen(PORT, () => {
-  console.log(`Server is running ${PORT}`)
+app.listen(3000, () => {
+  console.log(`Server is running`)
 })
